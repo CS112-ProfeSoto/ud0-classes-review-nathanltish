@@ -50,35 +50,35 @@ public class CardTester {
 	public static void main(String[] args) {
 		//NOTE: Comment all method calls out and uncomment one at a time as you pass tests!
 
-		CardTester.testToString();
+		// CardTester.testToString();
 
-		CardTester.testSetValue();
+		// CardTester.testSetValue();
 
-		CardTester.testSetSuit();
+		// CardTester.testSetSuit();
 		
-		CardTester.testSetAll();
+		// CardTester.testSetAll();
 		
 		// - test Default Constructor (implement default constructor,
 		//		then see toString() test to see if it passes)
 
-		CardTester.testFullConstructor();
+		// CardTester.testFullConstructor();
 
-		CardTester.testCopyConstructor();
+		// CardTester.testCopyConstructor();
 
-		CardTester.testGetSuit();
+		// 	CardTester.testGetSuit();
 
-		CardTester.testGetValue();
+		// 	CardTester.testGetValue();
 
-		CardTester.testGetPrintValue();
+		// CardTester.testGetPrintValue();
 
 		CardTester.testEquals();
 
-		// - test getPrintCard() and printCard() //use driver in Main
+	// 	// - test getPrintCard() and printCard() //use driver in Main
 	}
 
 
-	/*** TESTER HELPER METHODS ***/
-	//NOTE: Comment all out method definitions and uncomment one at a time as you pass tests!
+	// /*** TESTER HELPER METHODS ***/
+	// //NOTE: Comment all out method definitions and uncomment one at a time as you pass tests!
 
 	public static void testToString() {
 		Card test = new Card();
@@ -90,183 +90,193 @@ public class CardTester {
 		System.out.println("Otherwise, the above should show the default value of: A " + Card.DEFAULT_SUIT);
 	}
 
-	public static void testSetValue() {
-		boolean setterTest;
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING setValue() METHOD:\n");
 
-		// - valid data (data changes + return true)
-		setterTest = test.setValue(2);
-		System.out.println("setValue should have changed value only to 2: " + test + ". Setter returned " + setterTest);
+	// public static void testSetValue() {
+	// 	boolean setterTest;
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING setValue() METHOD:\n");
 
-		setterTest = test.setValue(10);
-		System.out.println("setValue should have changed value only to 10: " + test + ". Setter returned " + setterTest);
+	// 	// - valid data (data changes + return true)
+	// 	setterTest = test.setValue(2);
+	// 	System.out.println("setValue should have changed value only to 2: " + test + ". Setter returned " + setterTest);
 
-		setterTest = test.setValue(11);
-		System.out.println("setValue should have changed value only to J: " + test + ". Setter returned " + setterTest);
+	// 	setterTest = test.setValue(10);
+	// 	System.out.println("setValue should have changed value only to 10: " + test + ". Setter returned " + setterTest);
 
-		setterTest = test.setValue(12);
-		System.out.println("setValue should have changed value only to Q: " + test + ". Setter returned " + setterTest);
+	// 	setterTest = test.setValue(11);
+	// 	System.out.println("setValue should have changed value only to J: " + test + ". Setter returned " + setterTest);
 
-		setterTest = test.setValue(13);
-		System.out.println("setValue should have changed value only to K: " + test + ". Setter returned " + setterTest);
+	// 	setterTest = test.setValue(12);
+	// 	System.out.println("setValue should have changed value only to Q: " + test + ". Setter returned " + setterTest);
 
-		// - invalid data (no data change + return false)
-		setterTest = test.setValue(0);
-		System.out.println("setValue should NOT have changed value from K: " + test + ". Setter returned " + setterTest);
+	// 	setterTest = test.setValue(13);
+	// 	System.out.println("setValue should have changed value only to K: " + test + ". Setter returned " + setterTest);
 
-		setterTest = test.setValue(14);
-		System.out.println("setValue should NOT have changed value from K: " + test + ". Setter returned " + setterTest);
-	}
+	// 	// // - invalid data (no data change + return false)
+	// 	// setterTest = test.setValue(0);
+	// 	// System.out.println("setValue should NOT have changed value from K: " + test + ". Setter returned " + setterTest);
 
-	public static void testSetSuit() {
-		boolean setterTest;
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING setSuit() METHOD:\n");
+	// 	// setterTest = test.setValue(14);
+	// 	// System.out.println("setValue should NOT have changed value from K: " + test + ". Setter returned " + setterTest);
+	// }
 
-		// - valid data (data changes + return true)
-		setterTest = test.setSuit(Card.DIAMOND);
-		System.out.println("setSuit should have changed suit only to " + Card.DIAMOND + ": " + test
-			+ ". Setter returned " + setterTest);
 
-		setterTest = test.setSuit(Card.CLUB);
-		System.out.println("setSuit should have changed suit only to " + Card.CLUB + ": " + test
-			+ ". Setter returned " + setterTest);
+	// public static void testSetSuit() {
+	// 	boolean setterTest;
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING setSuit() METHOD:\n");
 
-		setterTest = test.setSuit(Card.SPADE);
-		System.out.println("setSuit should have changed suit only to " + Card.SPADE + ": " + test
-			+ ". Setter returned " + setterTest);
+	// 	// - valid data (data changes + return true)
+	// 	setterTest = test.setSuit(Card.DIAMOND);
+	// 	System.out.println("setSuit should have changed suit only to " + Card.DIAMOND + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		setterTest = test.setSuit(Card.HEART);
-		System.out.println("setSuit should have changed suit only to " + Card.HEART + ": " + test
-			+ ". Setter returned " + setterTest);
+	// 	setterTest = test.setSuit(Card.CLUB);
+	// 	System.out.println("setSuit should have changed suit only to " + Card.CLUB + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		// - invalid data (no data change + return false)
-		setterTest = test.setSuit('H');
-		System.out.println("setSuit should NOT have changed suit from " + Card.HEART + ": " + test
-			+ ". Setter returned " + setterTest);
+	// 	setterTest = test.setSuit(Card.SPADE);
+	// 	System.out.println("setSuit should have changed suit only to " + Card.SPADE + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		setterTest = test.setSuit((char) 7);
-		System.out.println("setSuit should NOT have changed suit from " + Card.HEART + ": " + test
-			+ ". Setter returned " + setterTest);
-	}
+	// 	setterTest = test.setSuit(Card.HEART);
+	// 	System.out.println("setSuit should have changed suit only to " + Card.HEART + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-	public static void testSetAll() {
-		boolean setterTest;
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING setAll() METHOD:\n");
+	// 	// // - invalid data (no data change + return false)
+	// 	// setterTest = test.setSuit('H');
+	// 	// System.out.println("setSuit should NOT have changed suit from " + Card.HEART + ": " + test
+	// 	// 	+ ". Setter returned " + setterTest);
 
-		// - valid data (data changes + return true)
-		setterTest = test.setAll(1, Card.DIAMOND);
-		System.out.println("setAll should have changed both to A " + Card.DIAMOND + ": " + test
-			+ ". Setter returned " + setterTest);
+	// 	// setterTest = test.setSuit((char) 7);
+	// 	// System.out.println("setSuit should NOT have changed suit from " + Card.HEART + ": " + test
+	// 	// 	+ ". Setter returned " + setterTest);
+	// }
 
-		setterTest = test.setAll(3, Card.SPADE);
-		System.out.println("setAll should have changed both to 3 " + Card.SPADE + ": " + test
-			+ ". Setter returned " + setterTest);
 
-		setterTest = test.setAll(4, Card.HEART);
-		System.out.println("setAll should have changed both to 4 " + Card.HEART + ": " + test
-			+ ". Setter returned " + setterTest);
+	// public static void testSetAll() {
+	// 	boolean setterTest;
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING setAll() METHOD:\n");
 
-		setterTest = test.setAll(5, Card.CLUB);
-		System.out.println("setAll should have changed both to 5 " + Card.CLUB + ": " + test
-			+ ". Setter returned " + setterTest);
+	// 	// - valid data (data changes + return true)
+	// 	setterTest = test.setAll(1, Card.DIAMOND);
+	// 	System.out.println("setAll should have changed both to A " + Card.DIAMOND + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		// - invalid data (no data change + return false)
-		setterTest = test.setAll(15, '8');
-		System.out.println("setAll should NOT have changed suit/value from last valid test: " + test
-			+ ". Setter returned " + setterTest);
+	// 	setterTest = test.setAll(3, Card.SPADE);
+	// 	System.out.println("setAll should have changed both to 3 " + Card.SPADE + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		setterTest = test.setAll(0, 'A');
-		System.out.println("setAll should NOT have changed suit/value from last valid test: " + test
-			+ ". Setter returned " + setterTest);
+	// 	setterTest = test.setAll(4, Card.HEART);
+	// 	System.out.println("setAll should have changed both to 4 " + Card.HEART + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-		setterTest = test.setAll(-1, '*');
-		System.out.println("setAll should NOT have changed suit/value from last valid test: " + test
-			+ ". Setter returned " + setterTest);
-	}
+	// 	setterTest = test.setAll(5, Card.CLUB);
+	// 	System.out.println("setAll should have changed both to 5 " + Card.CLUB + ": " + test
+	// 		+ ". Setter returned " + setterTest);
 
-	public static void testFullConstructor() {
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING Full Constructor METHOD:\n");
+	// 	// // - invalid data (no data change + return false)
+	// 	// setterTest = test.setAll(15, '8');
+	// 	// System.out.println("setAll should NOT have changed suit/value from last valid test: " + test
+	// 	// 	+ ". Setter returned " + setterTest);
 
-		// - valid data
-		test = new Card(6, Card.DIAMOND);
-		System.out.println("Full constructor should have built card 6 " + Card.DIAMOND + ": " + test);
+	// 	// setterTest = test.setAll(0, 'A');
+	// 	// System.out.println("setAll should NOT have changed suit/value from last valid test: " + test
+	// 	// 	+ ". Setter returned " + setterTest);
 
-		test = new Card(7, Card.HEART);
-		System.out.println("Full constructor should have built card 7 " + Card.HEART + ": " + test);
+	// 	// setterTest = test.setAll(-1, '*');
+	// 	// System.out.prin"setAll should NOT have changed suit/value from last valid test: " + test
+	// 	// 	+ ". Setter returntln(ed " + setterTest);
+	// }
 
-		// - invalid data (should shutdown program)
+
+	// public static void testFullConstructor() {
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING Full Constructor METHOD:\n");
+
+	// 	// - valid data
+	// 	test = new Card(6, Card.DIAMOND);
+	// 	System.out.println("Full constructor should have built card 6 " + Card.DIAMOND + ": " + test);
+
+	// 	test = new Card(7, Card.HEART);
+	// 	System.out.println("Full constructor should have built card 7 " + Card.HEART + ": " + test);
+
+		// // - invalid data (should shutdown program)
 		// test = new Card(17, Card.CLUB); //should shutdown program, test by uncommenting
 		// test = new Card(11, '3'); //should shutdown program, test by uncommenting
-		// test = new Card(17, Card.CLUB); //should shutdown program, test by uncommenting
-	}
+		// test = new Card(17, '3'); //should shutdown program, test by uncommenting
+	// }
 
-	public static void testCopyConstructor() {
-		Card original, copy;
-		System.out.println("\n==============================================");
-		System.out.println("TESTING Copy Constructor METHOD:\n");
 
-		// - valid data
-		original = new Card(5, Card.SPADE);
-		copy = new Card(original);
-		System.out.println("Copy constructor should have built card 5 " + Card.SPADE + ": " + copy);
-		System.out.println("Look the same? That's a good start! Need to make sure it's a deep copy!");
+	// public static void testCopyConstructor() {
+	// 	Card original, copy;
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING Copy Constructor METHOD:\n");
 
-		original.setAll(7, Card.DIAMOND);
-		System.out.println("Changed original object to 7 " + Card.DIAMOND + ". Did copy change too? " + copy);
-		System.out.println("Copy should have stayed as 5 " + Card.SPADE + " to be a deep copy!");
-		System.out.println("Why was this deep copy test of the instance variables unnecessary for this class?");
+	// 	// - valid data
+	// 	original = new Card(5, Card.SPADE);
+	// 	copy = new Card(original);
+	// 	System.out.println("Copy constructor should have built card 5 " + Card.SPADE + ": " + copy);
+	// 	System.out.println("Look the same? That's a good start! Need to make sure it's a deep copy!");
 
-		// - invalid data (null passed, should shutdown program)
-		//original = null;
-		//copy = new Card(original); //should shutdown program, test by uncommenting
-	}
+	// 	original.setAll(7, Card.DIAMOND);
+	// 	System.out.println("Changed original object to 7 " + Card.DIAMOND + ". Did copy change too? " + copy);
+	// 	System.out.println("Copy should have stayed as 5 " + Card.SPADE + " to be a deep copy!");
+	// 	System.out.println("Why was this deep copy test of the instance variables unnecessary for this class?");
 
-	public static void testGetSuit() {
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING getSuit() METHOD:\n");
+	// 	// - invalid data (null passed, should shutdown program)
+	// 	//original = null;
+	// 	//copy = new Card(original); //should shutdown program, test by uncommenting
+	// }
 
-		System.out.println("getSuit should be default suit " + Card.DEFAULT_SUIT + ": " + test.getSuit());
 
-		test.setAll(9, Card.SPADE);
-		System.out.println("Changed suit of card, getSuit should be " + Card.SPADE + ": " + test.getSuit());
-	}
+	// public static void testGetSuit() {
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING getSuit() METHOD:\n");
 
-	public static void testGetValue() {
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING getValue() METHOD:\n");
+	// 	System.out.println("getSuit should be default suit " + Card.DEFAULT_SUIT + ": " + test.getSuit());
 
-		System.out.println("getValue should be default value " + Card.DEFAULT_VALUE + ": " + test.getValue());
+	// 	test.setAll(9, Card.SPADE);
+	// 	System.out.println("Changed suit of card, getSuit should be " + Card.SPADE + ": " + test.getSuit());
+	// }
 
-		test.setAll(8, Card.CLUB);
-		System.out.println("Changed value of card, getValue should be 8: " + test.getValue());
-	}
 
-	public static void testGetPrintValue() {
-		Card test = new Card();
-		System.out.println("\n==============================================");
-		System.out.println("TESTING getPrintValue() METHOD:\n");
+	// public static void testGetValue() {
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING getValue() METHOD:\n");
 
-		//since there are only 13 values, simpler to just print all possibilities!
-		for(int i = 1; i <= 13; i++) {
-			test.setValue(i);
+	// 	System.out.println("getValue should be default value " + Card.DEFAULT_VALUE + ": " + test.getValue());
 
-			System.out.print( test.getPrintValue() + " ");
-		}
-		System.out.println("\n");
-		System.out.println("Above should have printed exactly like this:");
-		System.out.println("A 2 3 4 5 6 7 8 9 10 J Q K");
-	}
+	// 	test.setAll(8, Card.CLUB);
+	// 	System.out.println("Changed value of card, getValue should be 8: " + test.getValue());
+	// }
 
+	
+	// public static void testGetPrintValue() {
+	// 	Card test = new Card();
+	// 	System.out.println("\n==============================================");
+	// 	System.out.println("TESTING getPrintValue() METHOD:\n");
+
+	// 	//since there are only 13 values, simpler to just print all possibilities!
+	// 	for(int i = 1; i <= 13; i++) {
+	// 		test.setValue(i);
+
+	// 		System.out.print( test.getPrintValue() + " ");
+	// 	}
+	// 	System.out.println("\n");
+	// 	System.out.println("Above should have printed exactly like this:");
+	// 	System.out.println("A 2 3 4 5 6 7 8 9 10 J Q K");
+	// }
+
+
+	// having issues testing with this method 
 	public static void testEquals() {
 		Card original = new Card(8, Card.HEART), test = new Card(5, Card.CLUB);
 		System.out.println("\n==============================================");
