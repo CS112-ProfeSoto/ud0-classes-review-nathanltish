@@ -135,7 +135,7 @@ public class Card {
 	 *         false otherwise
 	 */
 	public boolean setSuit(char suit) {
-		boolean isValid = suit == Card.HEART || suit == Card.DIAMOND || suit == Card.SPADE;
+		boolean isValid = suit == Card.HEART || suit == Card.DIAMOND || suit == Card.CLUB || suit == Card.SPADE;
 
 		if (isValid) {
 			this.suit = suit;

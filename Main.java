@@ -3,7 +3,7 @@
  * and prints out each card in deck.
  *
  * @author Nathan Tshishimbi
- * @version 07/05/2025
+ * @version 07/10/2025
  */
 
 public class Main {
@@ -23,9 +23,10 @@ public class Main {
 	*
 	*/
 	public static void main(String[] args) {
-		/*** RUNNING TESTER ***/
-		//uncomment line below to run CardTester:
-		// CardTester.main(null);
+	/*** RUNNING TESTER ***/
+	//uncomment line below to run CardTester:
+	// CardTester.main(null);
+
 
 	/*** TESTING FOR getPrintCard() METHOD ***/
 	// Card test = new Card(1, Card.DIAMOND),
@@ -52,7 +53,7 @@ public class Main {
 	}
 
 
-	//2. Print deck
+		//2. Print deck
 		// Simple deck printing
 		for (int i = 0; i < deck.length; i++) {
 			if (i % 13 == 0 && i != 0) {
@@ -64,7 +65,7 @@ public class Main {
 		}
 
 		// Hackerchallenge
-		for (int i = 0; i < deck.length; i++) {
+		for (int i = 0; i < deck.length; i+= 13) {
 			//get set of cards (row of size 13) and break each into parts based on newline char (each card has 5 parts)
 			String[][] cardRow = new String[13][5]; // 2-D arrayy
 

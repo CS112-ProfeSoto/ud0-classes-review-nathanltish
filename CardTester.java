@@ -276,7 +276,6 @@ public class CardTester {
 	// }
 
 
-	// having issues testing with this method 
 	public static void testEquals() {
 		Card original = new Card(8, Card.HEART), test = new Card(5, Card.CLUB);
 		System.out.println("\n==============================================");
